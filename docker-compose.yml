@@ -1,27 +1,23 @@
-version: '3'
+version: "3.8"
 
 services:
-  backend:
-    build: ./backend                   # katalog z Dockerfile, package.json, server.js, .env
-    container_name: designweb-backend
-    env_file:
-      - ./backend/.env
-    dns:
-      - 192.168.226.1
-    expose:
-      - "3000"                         # udostępnia port tylko wewnątrz tej sieci dockera
+  backend:                       # usługa z Node
+    build: ./backend
+    container_name: my-backend
     restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./backend:/app
 
-  nginx:
-    image: nginx:latest
-    container_name: designweb-nginx
+  frontend:                      # Nginx do frontendu
+    image: nginx:alpine
+    container_name: my-frontend
+    restart: unless-stopped
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - ./frontend:/usr/share/nginx/html:ro               # pliki frontend
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro # twój config nginx.conf
-      - ./certs:/etc/nginx/certs:ro                   # certyfikaty SSL
-    depends_on:
-      - backend
-    restart: unless-stopped
+      - ./frontend:/usr/share/nginx/html:ro

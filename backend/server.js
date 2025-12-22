@@ -236,7 +236,7 @@ Data wysłania: ${new Date().toLocaleString('pl-PL')}
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="padding: 10px; background-color: #ffffff;">
+                                    <td style="padding: 10px; background-color: #f8f9fa; border-left: 3px solid #667eea;">
                                         <strong style="color: #555;">📧 Email:</strong><br>
                                         <a href="mailto:${email}" style="color: #667eea; text-decoration: none; font-size: 16px;">${email}</a>
                                     </td>
