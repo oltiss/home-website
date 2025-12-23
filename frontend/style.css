@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 :root {
-  --primary-color: #667eea;
-  --primary-dark: #5568d3;
-  --accent-color: #ff6b6b;
+  --primary-color: #053962;
+  --primary-dark: #042b4a;
+  --accent-color: #599aad;
   --text-color: #333333;
   --text-light: #666666;
   --bg-light: #f8f9fa;
@@ -181,7 +181,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #053962 0%, #599aad 100%);
   padding: 2rem;
   margin-top: 70px;
   position: relative;
@@ -530,7 +530,11 @@ section.fade-in {
 .submit-btn {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--accent-color) 100%
+  );
   color: white;
   border: none;
   border-radius: 8px;
@@ -542,7 +546,7 @@ section.fade-in {
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 6px 20px rgba(5, 57, 98, 0.4);
 }
 
 .contact-info {
@@ -616,7 +620,7 @@ section.fade-in {
 
 .footer-section h4 {
   margin-bottom: 1rem;
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .footer-section ul {
