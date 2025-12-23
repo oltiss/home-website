@@ -86,10 +86,14 @@ a {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: var(--primary-color);
   transition: var(--transition);
+  max-width: 400px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .logo:hover {
@@ -102,6 +106,7 @@ a {
   gap: 2rem;
   margin: 0;
   padding: 0;
+  font-size: 1.3rem;
 }
 
 .nav-menu a {
@@ -146,6 +151,13 @@ a {
   color: white !important;
 }
 
+#logo-img {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -183,7 +195,7 @@ a {
   justify-content: center;
   background: linear-gradient(135deg, #053962 0%, #599aad 100%);
   padding: 2rem;
-  margin-top: 70px;
+  margin-top: 35px;
   position: relative;
   overflow: hidden;
 }
@@ -230,7 +242,7 @@ a {
   color: white;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   transition: var(--transition);
   animation: fadeInUp 1s ease 0.4s backwards;
   box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
@@ -313,7 +325,7 @@ section.fade-in {
 }
 
 .about-text p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-light);
   margin-bottom: 1.5rem;
 }
@@ -662,6 +674,7 @@ section.fade-in {
     padding: 2rem;
     box-shadow: var(--shadow-lg);
     display: none;
+
   }
 
   .nav-menu.active {
