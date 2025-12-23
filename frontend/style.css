@@ -86,10 +86,14 @@ a {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: var(--primary-color);
   transition: var(--transition);
+  max-width: 400px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .logo:hover {
@@ -102,7 +106,7 @@ a {
   gap: 2rem;
   margin: 0;
   padding: 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .nav-menu a {
@@ -146,6 +150,13 @@ a {
   background: var(--primary-dark);
   color: white !important;
 }
+
+#logo-img {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+
 
 .hamburger {
   display: none;
