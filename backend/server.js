@@ -33,7 +33,12 @@ const limiter = rateLimit({
 // CORS - pozwala na żądania z innych domen (frontend -> backend)
 app.use(
   cors({
-    origin: ["http://design-web.pl", "http://localhost:8080"], // W produkcji zmień na konkretną domenę: 'https://design-web.pl'
+    origin: [
+      "http://design-web.pl",
+      "http://localhost:8080",
+      "http://localhost:5500",
+      "http://127.0.0.1:5500",
+    ], // Dodano porty dla Live Server
     methods: ["GET", "POST"],
     credentials: true,
   })
