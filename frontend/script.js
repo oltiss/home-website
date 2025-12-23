@@ -374,7 +374,7 @@ if (contactForm) {
       // - Development: 'http://localhost:3000/api/contact'
       // - Production: 'https://api.design-web.pl/api/contact' (lub Twoja domena)
 
-      const response = await fetch("http://localhost:3000/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST", // Metoda HTTP
         headers: {
           "Content-Type": "application/json", // Typ zawartości JSON
