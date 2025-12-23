@@ -143,7 +143,7 @@ window.addEventListener("scroll", highlightNavigation);
 
 const activeStyle = document.createElement("style");
 activeStyle.textContent = `
-    .nav-menu a.active-link {
+    .nav-menu a.active-link:not(.nav-cta) {
         color: var(--primary-color) !important;
     }
 
