@@ -1,19 +1,14 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
-# Ustaw katalog roboczy
 WORKDIR /app
 
-# Kopiuj package.json i package-lock.json (jeśli jest)
 COPY package*.json ./
 
-# Instaluj zależności
-RUN npm install
+RUN npm install --production
 
-# Kopiuj resztę plików
 COPY . .
 
-# Expose port na którym działa serwer Node.js
+# Change the port if your application uses a different one
 EXPOSE 3000
 
-# Uruchom serwer
 CMD ["npm", "start"]
