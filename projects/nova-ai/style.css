@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background:
+    radial-gradient(circle at top,#2a1850,#05060a 60%);
+  color: white;
+  min-height: 100vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 6%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,.7);
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 6%;
+  position: relative;
+}
+
+.glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #7c3aed;
+  filter: blur(180px);
+  opacity: .35;
+}
+
+.badge {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.08);
+  width: fit-content;
+  padding: .8rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(4rem,8vw,7rem);
+  line-height: .95;
+  letter-spacing: -5px;
+}
+
+.hero p {
+  margin-top: 2rem;
+  color: rgba(255,255,255,.7);
+  max-width: 520px;
+  font-size: 1.1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary {
+  background: linear-gradient(135deg,#7c3aed,#06b6d4);
+  color: white;
+}
+
+.secondary {
+  border: 1px solid rgba(255,255,255,.1);
+  color: white;
+}
+
+.dashboard-card {
+  height: 500px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 32px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 80px rgba(0,0,0,.4);
+}
+
+.dashboard-card img {
+    height: 100%;
+    width: 100%;
+    border-radius: 32px;
+}
+
+.features {
+  padding: 6rem 6%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+}
+
+.feature-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 28px;
+  padding: 2rem;
+}
